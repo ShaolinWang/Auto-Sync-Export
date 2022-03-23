@@ -22,7 +22,7 @@
     "url": "https://github.com/ShaolinWang/auto-sync-export/issues"
   },
   "license": "MIT",
-  "author": "Anthony Fu <anthonyfu117@hotmail.com>",
+  "author": "shaolin Wang <wangshaolin1116@163.com>",
   "repository": {
     "type": "git",
     "url": "https://github.com/ShaolinWang/auto-sync-export"
@@ -41,7 +41,6 @@
   "activationEvents": [
     "*"
   ],
-  "icon": "res/icon.png",
   "devDependencies": {
     "@antfu/eslint-config": "^0.18.8",
     "@antfu/ni": "^0.13.2",
