@@ -1,6 +1,6 @@
 {
   "name": "auto-sync-export",
-  "displayName": "My Extension",
+  "displayName": "Auto Sync Export",
   "version": "0.0.0",
   "publisher": "ShaolinWang",
   "packageManager": "pnpm@6.32.3",
