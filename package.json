@@ -1,22 +1,32 @@
 {
-  "name": "name",
+  "name": "auto-sync-export",
   "displayName": "My Extension",
   "version": "0.0.0",
-  "publisher": "antfu",
+  "publisher": "ShaolinWang",
   "packageManager": "pnpm@6.32.3",
-  "description": "",
-  "keywords": [],
-  "homepage": "https://github.com/antfu/[name]#readme",
+  "description": "Automatically finds, parses and generate export code in 'index' file for the same dictionary. Works with Typescript and TSX.",
+  "keywords": ["export", "sync"],
+  "homepage": "https://github.com/ShaolinWang/auto-sync-export#readme",
+  "scripts": {
+    "build": "tsup src/index.ts --external vscode",
+    "dev": "nr build --watch",
+    "lint": "eslint .",
+    "vscode:prepublish": "nr build",
+    "publish": "vsce publish --no-dependencies --allow-star-activation",
+    "pack": "vsce package --no-dependencies --allow-star-activation",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit",
+    "release": "bumpp --commit --push --tag && nr publish"
+  },
   "bugs": {
-    "url": "https://github.com/antfu/[name]/issues"
+    "url": "https://github.com/ShaolinWang/auto-sync-export/issues"
   },
   "license": "MIT",
   "author": "Anthony Fu <anthonyfu117@hotmail.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/antfu/[name]"
+    "url": "https://github.com/ShaolinWang/auto-sync-export"
   },
-  "funding": "https://github.com/sponsors/antfu",
   "main": "./dist/index.js",
   "files": [
     "dist"
@@ -32,17 +42,6 @@
     "*"
   ],
   "icon": "res/icon.png",
-  "scripts": {
-    "build": "tsup src/index.ts --external vscode",
-    "dev": "nr build --watch",
-    "lint": "eslint .",
-    "vscode:prepublish": "nr build",
-    "publish": "vsce publish --no-dependencies --allow-star-activation",
-    "pack": "vsce package --no-dependencies --allow-star-activation",
-    "test": "vitest",
-    "typecheck": "tsc --noEmit",
-    "release": "bumpp --commit --push --tag && nr publish"
-  },
   "devDependencies": {
     "@antfu/eslint-config": "^0.18.8",
     "@antfu/ni": "^0.13.2",
