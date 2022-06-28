@@ -34,8 +34,8 @@ async function getIndexFileName(fileName: string) {
 
 function getExportString(patch: ExportType, path?: string) {
   if (!path) return ''
-  if (patch.isDefault) return `export { default as ${patch.moduleName} } from '${path}'`
-  return `{export {${patch.moduleName}} from '${path}'}`
+  if (patch.isDefault) return `export { default as ${path.split('/').pop()} } from '${path}'`
+  return `export { ${patch.moduleName} } from '${path}'`
 }
 
 export function activate() {
