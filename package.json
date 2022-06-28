@@ -1,7 +1,7 @@
 {
   "name": "auto-sync-export",
   "displayName": "Auto Sync Export",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "publisher": "ShaolinWang",
   "packageManager": "pnpm@6.32.3",
   "description": "Automatically finds, parses and generate export code in 'index' file for the same dictionary. Works with Typescript and TSX.",
